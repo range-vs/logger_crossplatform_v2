@@ -476,3 +476,5 @@ lint/tmp/
 
 # Android Profiling
 *.hprof
+
+log.html
