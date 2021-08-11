@@ -7,8 +7,24 @@
             "args": [
                 "-g",
                 "${file}",
+                "-export-dynamic",
+                "${workspaceFolder}/../../logger/pch.cpp",
+                "${workspaceFolder}/../../logger/helpers/ConverterStringHelper.cpp",
+                "${workspaceFolder}/../../logger/helpers/StatusFunction.cpp",
+                "${workspaceFolder}/../../logger/logger/logger/log.cpp",
+                "${workspaceFolder}/../../logger/logger/logger/Logger.cpp",
+                "${workspaceFolder}/../../logger/logger/logger/helpers/LoggerParams.cpp",
+                "${workspaceFolder}/../../logger/logger/logger/output/HTMLFileOutput.cpp",
+                "${workspaceFolder}/../../logger/logger/logger/output/TerminalOutput.cpp",
+                "${workspaceFolder}/../../logger/logger/logger/output/factory_messages/HTMLFactory.cpp",
+                "${workspaceFolder}/../../logger/logger/logger/output/factory_messages/TerminalFactory.cpp",
+                "${workspaceFolder}/../../logger/stacktrace/StackTraceSingleton.cpp",
+                "${workspaceFolder}/../../logger/stacktrace/linux/stacktrace_linux.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-D_LINUX",
+                "-ldl",
+                "--include-directory=${workspaceFolder}/../../logger"
             ],
             "options": {
                 "cwd": "${fileDirname}"

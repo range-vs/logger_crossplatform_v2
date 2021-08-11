@@ -4,6 +4,8 @@
 #include "windows/StackWalker.h"
 #elif __ANDROID__ 
 #include "android/stacktrace_android.h"
+#elif _LINUX
+#include "linux/stacktrace_linux.h"
 #endif
 
 class StackTraceSingleton

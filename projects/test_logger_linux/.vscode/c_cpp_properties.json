@@ -1,0 +1,26 @@
+{
+    "env": {
+      "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}/../../logger"],
+      "myCompilerPath": "/usr/bin/gcc"
+    },
+    "configurations": [
+      {
+        "name": "Linux",
+        "intelliSenseMode": "clang-x64",
+        "includePath": ["${myDefaultIncludePath}", "/another/path"],
+        "macFrameworkPath": ["/System/Library/Frameworks"],
+        "forcedInclude": ["${workspaceFolder}/include/config.h"],
+        "defines": ["_LINUX"],
+        "compilerPath": "/usr/bin/clang",
+        "cStandard": "c11",
+        "cppStandard": "c++17",
+        "compileCommands": "/path/to/compile_commands.json",
+        "browse": {
+          "path": ["${workspaceFolder}"],
+          "limitSymbolsToIncludedHeaders": true,
+          "databaseFilename": ""
+        }
+      }
+    ],
+    "version": 4
+  }

@@ -49,6 +49,9 @@ std::string StackTraceSingleton::getStacktrace()
 	swa.dumpBacktrace(oss, buffer, max);
 	lines = splitter("\n", oss.str()); 
 	shiftStackTrace = 3;
+#elif _LINUX
+	lines = StackWalkerLinux::dumpBacktrace();
+	shiftStackTrace = 2; 
 #else
 	return "Stack trace: gig";
 #endif
