@@ -21,8 +21,7 @@
                 "${workspaceFolder}/../../logger/stacktrace/StackTraceSingleton.cpp",
                 "${workspaceFolder}/../../logger/stacktrace/linux/stacktrace_linux.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}",
-                "-D_LINUX",
+                "app_test_logger",
                 "-ldl",
                 "--include-directory=${workspaceFolder}/../../logger"
             ],

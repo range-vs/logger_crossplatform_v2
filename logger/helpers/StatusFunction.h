@@ -17,14 +17,14 @@ namespace stat_func
 
 namespace init_logger
 {
-    #if defined(_WIN32) || defined(_LINUX) || defined(TARGET_OS_MAC)
+    #if _WIN32 || __linux__ || __APPLE__
         void _logger_init(const std::string& path);
     #elif __ANDROID__ 
         void _logger_init(JNIEnv* env, jobject activity, const std::string& path);
     #endif
 }
 
-#if defined(_WIN32) || defined(_LINUX) || defined(TARGET_OS_MAC)
+#if _WIN32 || __linux__ || __APPLE__
     #define logger_init(path) { init_logger::_logger_init(path); }
 #elif __ANDROID__ 
     #define logger_init(env, activity, path) init_logger:_logger_init(env, activity, path);
