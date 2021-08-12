@@ -478,3 +478,4 @@ lint/tmp/
 *.hprof
 
 log.html
+projects/test_logger_linux/main
