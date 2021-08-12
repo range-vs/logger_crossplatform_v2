@@ -37,7 +37,7 @@ namespace init_logger
         std::shared_ptr<TerminalOutput> terminalOutput(std::make_shared<TerminalOutput>());
         log_init("alien engine", "0.0.1", htmlFileOutput, terminalOutput, androidLogcatOutput);
     }
-    #elif _LINUX
+    #else if defined(_LINUX) || definded(TARGET_OS_MAC)
     void _logger_init(const std::string& path)
     {
         std::shared_ptr<HTMLFileOutput> htmlFileOutput(std::make_shared<HTMLFileOutput>());

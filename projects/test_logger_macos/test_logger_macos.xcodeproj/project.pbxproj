@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		667F77D626C57DB80073869F /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 667F77D526C57DB80073869F /* main.mm */; };
+		667F77ED26C5C9EF0073869F /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77EB26C5C9EF0073869F /* pch.cpp */; };
+		667F77EE26C5C9EF0073869F /* pch.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F77EC26C5C9EF0073869F /* pch.h */; };
+		667F77F326C5C9FF0073869F /* StatusFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77EF26C5C9FF0073869F /* StatusFunction.cpp */; };
+		667F77F426C5C9FF0073869F /* ConverterStringHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F77F026C5C9FF0073869F /* ConverterStringHelper.h */; };
+		667F77F526C5C9FF0073869F /* ConverterStringHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77F126C5C9FF0073869F /* ConverterStringHelper.cpp */; };
+		667F77F626C5C9FF0073869F /* StatusFunction.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F77F226C5C9FF0073869F /* StatusFunction.h */; };
+		667F77F826C5CA0E0073869F /* ctml.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77F726C5CA0E0073869F /* ctml.hpp */; };
+		667F77FD26C5CA240073869F /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77F926C5CA240073869F /* log.cpp */; };
+		667F77FE26C5CA240073869F /* Logger.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F77FA26C5CA240073869F /* Logger.h */; };
+		667F77FF26C5CA240073869F /* log.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F77FB26C5CA240073869F /* log.h */; };
+		667F780026C5CA240073869F /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77FC26C5CA240073869F /* Logger.cpp */; };
+		667F780626C5CA4A0073869F /* LoggerParams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F780126C5CA4A0073869F /* LoggerParams.cpp */; };
+		667F780726C5CA4A0073869F /* StrConsts.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780226C5CA4A0073869F /* StrConsts.h */; };
+		667F780826C5CA4A0073869F /* time_utils.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780326C5CA4A0073869F /* time_utils.h */; };
+		667F780926C5CA4A0073869F /* tuple_utils.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780426C5CA4A0073869F /* tuple_utils.h */; };
+		667F780A26C5CA4A0073869F /* LoggerParams.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780526C5CA4A0073869F /* LoggerParams.h */; };
+		667F780C26C5CA5B0073869F /* TypeMessages.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780B26C5CA5B0073869F /* TypeMessages.h */; };
+		667F781B26C5CA6E0073869F /* HTMLFileOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F780E26C5CA6D0073869F /* HTMLFileOutput.cpp */; };
+		667F781E26C5CA6E0073869F /* HTMLFileOutput.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F781126C5CA6D0073869F /* HTMLFileOutput.h */; };
+		667F782026C5CA6E0073869F /* TerminalOutput.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F781326C5CA6D0073869F /* TerminalOutput.h */; };
+		667F782326C5CA6E0073869F /* BaseOutput.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F781626C5CA6E0073869F /* BaseOutput.h */; };
+		667F782426C5CA6E0073869F /* TerminalOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F781726C5CA6E0073869F /* TerminalOutput.cpp */; };
+		667F782B26C5CA830073869F /* HTMLFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F782726C5CA830073869F /* HTMLFactory.cpp */; };
+		667F782C26C5CA830073869F /* TerminalFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F782826C5CA830073869F /* TerminalFactory.cpp */; };
+		667F782D26C5CA830073869F /* HTMLFactory.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F782926C5CA830073869F /* HTMLFactory.h */; };
+		667F782E26C5CA830073869F /* TerminalFactory.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F782A26C5CA830073869F /* TerminalFactory.h */; };
+		667F783126C5CAB00073869F /* StackTraceSingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F782F26C5CAB00073869F /* StackTraceSingleton.cpp */; };
+		667F783226C5CAB00073869F /* StackTraceSingleton.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F783026C5CAB00073869F /* StackTraceSingleton.h */; };
+		667F783526C5CAD40073869F /* stacktrace_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F783326C5CAD40073869F /* stacktrace_linux.cpp */; };
+		667F783626C5CAD40073869F /* stacktrace_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F783426C5CAD40073869F /* stacktrace_linux.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		667F77D026C57DB80073869F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		667F77D226C57DB80073869F /* test_logger_macos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_logger_macos; sourceTree = BUILT_PRODUCTS_DIR; };
+		667F77D526C57DB80073869F /* main.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		667F77EB26C5C9EF0073869F /* pch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pch.cpp; path = ../../logger/pch.cpp; sourceTree = "<group>"; };
+		667F77EC26C5C9EF0073869F /* pch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pch.h; path = ../../logger/pch.h; sourceTree = "<group>"; };
+		667F77EF26C5C9FF0073869F /* StatusFunction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StatusFunction.cpp; path = ../../logger/helpers/StatusFunction.cpp; sourceTree = "<group>"; };
+		667F77F026C5C9FF0073869F /* ConverterStringHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConverterStringHelper.h; path = ../../logger/helpers/ConverterStringHelper.h; sourceTree = "<group>"; };
+		667F77F126C5C9FF0073869F /* ConverterStringHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ConverterStringHelper.cpp; path = ../../logger/helpers/ConverterStringHelper.cpp; sourceTree = "<group>"; };
+		667F77F226C5C9FF0073869F /* StatusFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StatusFunction.h; path = ../../logger/helpers/StatusFunction.h; sourceTree = "<group>"; };
+		667F77F726C5CA0E0073869F /* ctml.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ctml.hpp; path = ../../logger/logger/html/ctml.hpp; sourceTree = "<group>"; };
+		667F77F926C5CA240073869F /* log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = ../../logger/logger/logger/log.cpp; sourceTree = "<group>"; };
+		667F77FA26C5CA240073869F /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = ../../logger/logger/logger/Logger.h; sourceTree = "<group>"; };
+		667F77FB26C5CA240073869F /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = log.h; path = ../../logger/logger/logger/log.h; sourceTree = "<group>"; };
+		667F77FC26C5CA240073869F /* Logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = ../../logger/logger/logger/Logger.cpp; sourceTree = "<group>"; };
+		667F780126C5CA4A0073869F /* LoggerParams.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LoggerParams.cpp; path = ../../logger/logger/logger/helpers/LoggerParams.cpp; sourceTree = "<group>"; };
+		667F780226C5CA4A0073869F /* StrConsts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StrConsts.h; path = ../../logger/logger/logger/helpers/StrConsts.h; sourceTree = "<group>"; };
+		667F780326C5CA4A0073869F /* time_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = time_utils.h; path = ../../logger/logger/logger/helpers/time_utils.h; sourceTree = "<group>"; };
+		667F780426C5CA4A0073869F /* tuple_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tuple_utils.h; path = ../../logger/logger/logger/helpers/tuple_utils.h; sourceTree = "<group>"; };
+		667F780526C5CA4A0073869F /* LoggerParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoggerParams.h; path = ../../logger/logger/logger/helpers/LoggerParams.h; sourceTree = "<group>"; };
+		667F780B26C5CA5B0073869F /* TypeMessages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TypeMessages.h; path = ../../logger/logger/logger/messages/TypeMessages.h; sourceTree = "<group>"; };
+		667F780E26C5CA6D0073869F /* HTMLFileOutput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HTMLFileOutput.cpp; path = ../../logger/logger/logger/output/HTMLFileOutput.cpp; sourceTree = "<group>"; };
+		667F781126C5CA6D0073869F /* HTMLFileOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HTMLFileOutput.h; path = ../../logger/logger/logger/output/HTMLFileOutput.h; sourceTree = "<group>"; };
+		667F781326C5CA6D0073869F /* TerminalOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TerminalOutput.h; path = ../../logger/logger/logger/output/TerminalOutput.h; sourceTree = "<group>"; };
+		667F781626C5CA6E0073869F /* BaseOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BaseOutput.h; path = ../../logger/logger/logger/output/BaseOutput.h; sourceTree = "<group>"; };
+		667F781726C5CA6E0073869F /* TerminalOutput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TerminalOutput.cpp; path = ../../logger/logger/logger/output/TerminalOutput.cpp; sourceTree = "<group>"; };
+		667F782726C5CA830073869F /* HTMLFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HTMLFactory.cpp; path = ../../logger/logger/logger/output/factory_messages/HTMLFactory.cpp; sourceTree = "<group>"; };
+		667F782826C5CA830073869F /* TerminalFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TerminalFactory.cpp; path = ../../logger/logger/logger/output/factory_messages/TerminalFactory.cpp; sourceTree = "<group>"; };
+		667F782926C5CA830073869F /* HTMLFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HTMLFactory.h; path = ../../logger/logger/logger/output/factory_messages/HTMLFactory.h; sourceTree = "<group>"; };
+		667F782A26C5CA830073869F /* TerminalFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TerminalFactory.h; path = ../../logger/logger/logger/output/factory_messages/TerminalFactory.h; sourceTree = "<group>"; };
+		667F782F26C5CAB00073869F /* StackTraceSingleton.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StackTraceSingleton.cpp; path = ../../logger/stacktrace/StackTraceSingleton.cpp; sourceTree = "<group>"; };
+		667F783026C5CAB00073869F /* StackTraceSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StackTraceSingleton.h; path = ../../logger/stacktrace/StackTraceSingleton.h; sourceTree = "<group>"; };
+		667F783326C5CAD40073869F /* stacktrace_linux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stacktrace_linux.cpp; path = ../../logger/stacktrace/linux/stacktrace_linux.cpp; sourceTree = "<group>"; };
+		667F783426C5CAD40073869F /* stacktrace_linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stacktrace_linux.h; path = ../../logger/stacktrace/linux/stacktrace_linux.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		667F77CF26C57DB80073869F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		667F77C926C57DB80073869F = {
+			isa = PBXGroup;
+			children = (
+				667F783726C5CB9A0073869F /* logger_src */,
+				667F77D426C57DB80073869F /* test_logger_macos */,
+				667F77D326C57DB80073869F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		667F77D326C57DB80073869F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				667F77D226C57DB80073869F /* test_logger_macos */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		667F77D426C57DB80073869F /* test_logger_macos */ = {
+			isa = PBXGroup;
+			children = (
+				667F77D526C57DB80073869F /* main.mm */,
+			);
+			path = test_logger_macos;
+			sourceTree = "<group>";
+		};
+		667F783726C5CB9A0073869F /* logger_src */ = {
+			isa = PBXGroup;
+			children = (
+				667F783326C5CAD40073869F /* stacktrace_linux.cpp */,
+				667F783426C5CAD40073869F /* stacktrace_linux.h */,
+				667F782F26C5CAB00073869F /* StackTraceSingleton.cpp */,
+				667F783026C5CAB00073869F /* StackTraceSingleton.h */,
+				667F782726C5CA830073869F /* HTMLFactory.cpp */,
+				667F782926C5CA830073869F /* HTMLFactory.h */,
+				667F782826C5CA830073869F /* TerminalFactory.cpp */,
+				667F782A26C5CA830073869F /* TerminalFactory.h */,
+				667F781626C5CA6E0073869F /* BaseOutput.h */,
+				667F780E26C5CA6D0073869F /* HTMLFileOutput.cpp */,
+				667F781126C5CA6D0073869F /* HTMLFileOutput.h */,
+				667F781726C5CA6E0073869F /* TerminalOutput.cpp */,
+				667F781326C5CA6D0073869F /* TerminalOutput.h */,
+				667F780B26C5CA5B0073869F /* TypeMessages.h */,
+				667F780126C5CA4A0073869F /* LoggerParams.cpp */,
+				667F780526C5CA4A0073869F /* LoggerParams.h */,
+				667F780226C5CA4A0073869F /* StrConsts.h */,
+				667F780326C5CA4A0073869F /* time_utils.h */,
+				667F780426C5CA4A0073869F /* tuple_utils.h */,
+				667F77F926C5CA240073869F /* log.cpp */,
+				667F77FB26C5CA240073869F /* log.h */,
+				667F77FC26C5CA240073869F /* Logger.cpp */,
+				667F77FA26C5CA240073869F /* Logger.h */,
+				667F77F726C5CA0E0073869F /* ctml.hpp */,
+				667F77F126C5C9FF0073869F /* ConverterStringHelper.cpp */,
+				667F77F026C5C9FF0073869F /* ConverterStringHelper.h */,
+				667F77EF26C5C9FF0073869F /* StatusFunction.cpp */,
+				667F77F226C5C9FF0073869F /* StatusFunction.h */,
+				667F77EB26C5C9EF0073869F /* pch.cpp */,
+				667F77EC26C5C9EF0073869F /* pch.h */,
+			);
+			name = logger_src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		667F77D126C57DB80073869F /* test_logger_macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 667F77D926C57DB80073869F /* Build configuration list for PBXNativeTarget "test_logger_macos" */;
+			buildPhases = (
+				667F77CE26C57DB80073869F /* Sources */,
+				667F77CF26C57DB80073869F /* Frameworks */,
+				667F77D026C57DB80073869F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test_logger_macos;
+			productName = test_logger_macos;
+			productReference = 667F77D226C57DB80073869F /* test_logger_macos */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		667F77CA26C57DB80073869F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					667F77D126C57DB80073869F = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 667F77CD26C57DB80073869F /* Build configuration list for PBXProject "test_logger_macos" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 667F77C926C57DB80073869F;
+			productRefGroup = 667F77D326C57DB80073869F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				667F77D126C57DB80073869F /* test_logger_macos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		667F77CE26C57DB80073869F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667F783526C5CAD40073869F /* stacktrace_linux.cpp in Sources */,
+				667F783626C5CAD40073869F /* stacktrace_linux.h in Sources */,
+				667F783126C5CAB00073869F /* StackTraceSingleton.cpp in Sources */,
+				667F783226C5CAB00073869F /* StackTraceSingleton.h in Sources */,
+				667F782B26C5CA830073869F /* HTMLFactory.cpp in Sources */,
+				667F782C26C5CA830073869F /* TerminalFactory.cpp in Sources */,
+				667F782D26C5CA830073869F /* HTMLFactory.h in Sources */,
+				667F782E26C5CA830073869F /* TerminalFactory.h in Sources */,
+				667F781B26C5CA6E0073869F /* HTMLFileOutput.cpp in Sources */,
+				667F781E26C5CA6E0073869F /* HTMLFileOutput.h in Sources */,
+				667F782026C5CA6E0073869F /* TerminalOutput.h in Sources */,
+				667F782326C5CA6E0073869F /* BaseOutput.h in Sources */,
+				667F782426C5CA6E0073869F /* TerminalOutput.cpp in Sources */,
+				667F780C26C5CA5B0073869F /* TypeMessages.h in Sources */,
+				667F780626C5CA4A0073869F /* LoggerParams.cpp in Sources */,
+				667F780726C5CA4A0073869F /* StrConsts.h in Sources */,
+				667F780826C5CA4A0073869F /* time_utils.h in Sources */,
+				667F780926C5CA4A0073869F /* tuple_utils.h in Sources */,
+				667F780A26C5CA4A0073869F /* LoggerParams.h in Sources */,
+				667F77FD26C5CA240073869F /* log.cpp in Sources */,
+				667F77FE26C5CA240073869F /* Logger.h in Sources */,
+				667F77FF26C5CA240073869F /* log.h in Sources */,
+				667F780026C5CA240073869F /* Logger.cpp in Sources */,
+				667F77F826C5CA0E0073869F /* ctml.hpp in Sources */,
+				667F77F326C5C9FF0073869F /* StatusFunction.cpp in Sources */,
+				667F77F426C5C9FF0073869F /* ConverterStringHelper.h in Sources */,
+				667F77F526C5C9FF0073869F /* ConverterStringHelper.cpp in Sources */,
+				667F77F626C5C9FF0073869F /* StatusFunction.h in Sources */,
+				667F77ED26C5C9EF0073869F /* pch.cpp in Sources */,
+				667F77EE26C5C9EF0073869F /* pch.h in Sources */,
+				667F77D626C57DB80073869F /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		667F77D726C57DB80073869F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		667F77D826C57DB80073869F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		667F77DA26C57DB80073869F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L2TBFNKQ7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = ../../logger/;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		667F77DB26C57DB80073869F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L2TBFNKQ7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = ../../logger/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		667F77CD26C57DB80073869F /* Build configuration list for PBXProject "test_logger_macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				667F77D726C57DB80073869F /* Debug */,
+				667F77D826C57DB80073869F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		667F77D926C57DB80073869F /* Build configuration list for PBXNativeTarget "test_logger_macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				667F77DA26C57DB80073869F /* Debug */,
+				667F77DB26C57DB80073869F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 667F77CA26C57DB80073869F /* Project object */;
+}

@@ -4,7 +4,7 @@
 #include "windows/StackWalker.h"
 #elif __ANDROID__ 
 #include "android/stacktrace_android.h"
-#elif _LINUX
+#elif __linux__ || __APPLE__
 #include "linux/stacktrace_linux.h"
 #endif
 
@@ -34,6 +34,7 @@ public:
     void operator=(const StackTraceSingleton&) = delete;
     StackTraceSingleton(const StackTraceSingleton&&) = delete;
     void operator=(StackTraceSingleton&&) = delete;
+    ~StackTraceSingleton() = default;
 
     static std::unique_ptr<StackTraceSingleton>& getInstance();
 

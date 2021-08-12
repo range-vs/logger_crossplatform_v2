@@ -49,7 +49,7 @@ std::string StackTraceSingleton::getStacktrace()
 	swa.dumpBacktrace(oss, buffer, max);
 	lines = splitter("\n", oss.str()); 
 	shiftStackTrace = 3;
-#elif _LINUX
+#elif __linux__ || __APPLE__
 	lines = StackWalkerLinux::dumpBacktrace();
 	shiftStackTrace = 2; 
 #else

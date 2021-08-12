@@ -2,7 +2,7 @@
 
 #include "stacktrace_linux.h"
 
-#ifdef _LINUX
+#if __linux__ || __APPLE__
 
 std::vector<std::string> StackWalkerLinux::dumpBacktrace()
 {

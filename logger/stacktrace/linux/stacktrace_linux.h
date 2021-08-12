@@ -1,6 +1,6 @@
 #pragma once
 
-#ifdef _LINUX
+#if __linux__ || __APPLE__
 
 #include <execinfo.h>
 
