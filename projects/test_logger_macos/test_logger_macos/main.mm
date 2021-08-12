@@ -40,5 +40,5 @@ int main(int argc, const char * argv[])
 
 }
 
-// NSLog vs std::cout
 // добавить аутпут в NSLog
+// удалить из мака вывод в терминал
