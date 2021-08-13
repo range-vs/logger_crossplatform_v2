@@ -6,7 +6,6 @@
 //
 
 #include <pch.h>
-#import <Foundation/Foundation.h>
 
 #include "helpers/StatusFunction.h"
 
@@ -39,6 +38,3 @@ int main(int argc, const char * argv[])
     checkCriticalError(true, 332, "sadas", 5);
 
 }
-
-// добавить аутпут в NSLog
-// удалить из мака вывод в терминал

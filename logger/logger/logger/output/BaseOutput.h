@@ -12,7 +12,9 @@ enum class OutputType
 	HTML_FILE,
 	TERMINAL,
 	VISUAL_STUDIO,
-	WIN_API
+	WIN_API,
+    APPLE_OUTPUT,
+    MAC_OUTPUT
 };
 
 class BaseOutput

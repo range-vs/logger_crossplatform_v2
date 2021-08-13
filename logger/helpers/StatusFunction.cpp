@@ -37,13 +37,22 @@ namespace init_logger
         std::shared_ptr<TerminalOutput> terminalOutput(std::make_shared<TerminalOutput>());
         log_init("alien engine", "0.0.1", htmlFileOutput, terminalOutput, androidLogcatOutput);
     }
-    #elif __linux__ || __APPLE__
+    #elif __linux__
     void _logger_init(const std::string& path)
     {
         std::shared_ptr<HTMLFileOutput> htmlFileOutput(std::make_shared<HTMLFileOutput>());
         htmlFileOutput->setPathFile(path);
         std::shared_ptr<TerminalOutput> terminalOutput(std::make_shared<TerminalOutput>());
         log_init("alien engine", "0.0.1", htmlFileOutput, terminalOutput);
+    }
+    #elif __APPLE__
+    void _logger_init(const std::string& path)
+    {
+        std::shared_ptr<HTMLFileOutput> htmlFileOutput(std::make_shared<HTMLFileOutput>());
+        htmlFileOutput->setPathFile(path);
+        std::shared_ptr<AppleTerminalOutput> terminalOutput(std::make_shared<AppleTerminalOutput>());
+        std::shared_ptr<MacOutput> macOutput(std::make_shared<MacOutput>());
+        log_init("alien engine", "0.0.1", htmlFileOutput, terminalOutput, macOutput);
     }
     #endif
 }

@@ -38,6 +38,9 @@
 		667F783226C5CAB00073869F /* StackTraceSingleton.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F783026C5CAB00073869F /* StackTraceSingleton.h */; };
 		667F783526C5CAD40073869F /* stacktrace_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F783326C5CAD40073869F /* stacktrace_linux.cpp */; };
 		667F783626C5CAD40073869F /* stacktrace_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F783426C5CAD40073869F /* stacktrace_linux.h */; };
+		667F783D26C72F810073869F /* AppleTerminalOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = 667F783B26C72F810073869F /* AppleTerminalOutput.mm */; };
+		667F784026C733010073869F /* MacOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = 667F783E26C733010073869F /* MacOutput.mm */; };
+		667F784326C7353F0073869F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667F784226C7353F0073869F /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +88,11 @@
 		667F783026C5CAB00073869F /* StackTraceSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StackTraceSingleton.h; path = ../../logger/stacktrace/StackTraceSingleton.h; sourceTree = "<group>"; };
 		667F783326C5CAD40073869F /* stacktrace_linux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stacktrace_linux.cpp; path = ../../logger/stacktrace/linux/stacktrace_linux.cpp; sourceTree = "<group>"; };
 		667F783426C5CAD40073869F /* stacktrace_linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stacktrace_linux.h; path = ../../logger/stacktrace/linux/stacktrace_linux.h; sourceTree = "<group>"; };
+		667F783B26C72F810073869F /* AppleTerminalOutput.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = AppleTerminalOutput.mm; path = ../../logger/logger/logger/output/AppleTerminalOutput.mm; sourceTree = "<group>"; };
+		667F783C26C72F810073869F /* AppleTerminalOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleTerminalOutput.h; path = ../../logger/logger/logger/output/AppleTerminalOutput.h; sourceTree = "<group>"; };
+		667F783E26C733010073869F /* MacOutput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacOutput.mm; path = ../../logger/logger/logger/output/MacOutput.mm; sourceTree = "<group>"; };
+		667F783F26C733010073869F /* MacOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacOutput.h; path = ../../logger/logger/logger/output/MacOutput.h; sourceTree = "<group>"; };
+		667F784226C7353F0073869F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667F784326C7353F0073869F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +113,7 @@
 				667F783726C5CB9A0073869F /* logger_src */,
 				667F77D426C57DB80073869F /* test_logger_macos */,
 				667F77D326C57DB80073869F /* Products */,
+				667F784126C7353F0073869F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +136,10 @@
 		667F783726C5CB9A0073869F /* logger_src */ = {
 			isa = PBXGroup;
 			children = (
+				667F783F26C733010073869F /* MacOutput.h */,
+				667F783E26C733010073869F /* MacOutput.mm */,
+				667F783B26C72F810073869F /* AppleTerminalOutput.mm */,
+				667F783C26C72F810073869F /* AppleTerminalOutput.h */,
 				667F783326C5CAD40073869F /* stacktrace_linux.cpp */,
 				667F783426C5CAD40073869F /* stacktrace_linux.h */,
 				667F782F26C5CAB00073869F /* StackTraceSingleton.cpp */,
@@ -158,6 +172,14 @@
 				667F77EC26C5C9EF0073869F /* pch.h */,
 			);
 			name = logger_src;
+			sourceTree = "<group>";
+		};
+		667F784126C7353F0073869F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				667F784226C7353F0073869F /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,8 +243,10 @@
 				667F783126C5CAB00073869F /* StackTraceSingleton.cpp in Sources */,
 				667F783226C5CAB00073869F /* StackTraceSingleton.h in Sources */,
 				667F782B26C5CA830073869F /* HTMLFactory.cpp in Sources */,
+				667F784026C733010073869F /* MacOutput.mm in Sources */,
 				667F782C26C5CA830073869F /* TerminalFactory.cpp in Sources */,
 				667F782D26C5CA830073869F /* HTMLFactory.h in Sources */,
+				667F783D26C72F810073869F /* AppleTerminalOutput.mm in Sources */,
 				667F782E26C5CA830073869F /* TerminalFactory.h in Sources */,
 				667F781B26C5CA6E0073869F /* HTMLFileOutput.cpp in Sources */,
 				667F781E26C5CA6E0073869F /* HTMLFileOutput.h in Sources */,

@@ -6,11 +6,13 @@
 #include "output/TerminalOutput.h"
 #ifdef _WIN32
 #include "output/VisualStudioOutput.h"
-#include "output\WinAPIOutput.h"
-#endif
-#ifdef __ANDROID__
+#include "output/WinAPIOutput.h"
+#elif __ANDROID__
 #include "output/AndroidLogcatOutput.h"
 #include "output/AndroidToastOutput.h"
+#elif __APPLE__
+#include "output/AppleTerminalOutput.h"
+#include "output/MacOutput.h"
 #endif
 
 #include <string>
