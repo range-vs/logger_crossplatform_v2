@@ -12,7 +12,10 @@
 #include "output/AndroidToastOutput.h"
 #elif __APPLE__
 #include "output/AppleTerminalOutput.h"
+#include <TargetConditionals.h>
+#ifndef TARGET_OS_IPHONE
 #include "output/MacOutput.h"
+#endif
 #endif
 
 #include <string>
