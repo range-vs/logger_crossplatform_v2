@@ -4,6 +4,8 @@
 
 #include "helpers/StatusFunction.h"
 
+void _logger_init(JNIEnv *pEnv, jobject pJobject, std::string basicString);
+
 extern "C" JNIEXPORT void JNICALL
 Java_com_test_logger_android_MainActivity_initLogger(
         JNIEnv* env,
@@ -12,7 +14,7 @@ Java_com_test_logger_android_MainActivity_initLogger(
         jobject activity)
 {
     jboolean isCopy;
-    const char *convertedValue = env->GetStringUTFChars(pathLog, &isCopy);
+    std::string convertedValue = env->GetStringUTFChars(pathLog, &isCopy);
 
     logger_init(env, activity, convertedValue);
 

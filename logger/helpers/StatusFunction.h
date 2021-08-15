@@ -21,17 +21,26 @@ namespace stat_func
 
 namespace init_logger
 {
-    #if _WIN32 || __linux__ || __APPLE__
-        void _logger_init(const std::string& path);
-    #elif __ANDROID__ 
-        void _logger_init(JNIEnv* env, jobject activity, const std::string& path);
-    #endif
+#if _WIN32
+    void _logger_init(const std::string& path);
+#elif __APPLE__
+    void _logger_init(const std::string& path);
+#elif __ANDROID__
+    void _logger_init(JNIEnv* env, jobject activity, const std::string& path);
+#elif __linux__
+    void _logger_init(const std::string& path);
+#endif
+
 }
 
-#if _WIN32 || __linux__ || __APPLE__
-    #define logger_init(path) { init_logger::_logger_init(path); }
-#elif __ANDROID__ 
-    #define logger_init(env, activity, path) init_logger:_logger_init(env, activity, path);
+#if _WIN32
+#define logger_init(path) { init_logger::_logger_init(path); }
+#elif __APPLE__
+#define logger_init(path) { init_logger::_logger_init(path); }
+#elif __ANDROID__
+#define logger_init(env, activity, path) { init_logger::_logger_init(env, activity, path); }
+#elif __linux__
+#define logger_init(path) { init_logger::_logger_init(path); }
 #endif
 
 #define printMessage(...) log_debug(__VA_ARGS__);
