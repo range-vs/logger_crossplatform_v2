@@ -110,13 +110,13 @@ void HTMLFileOutput::init(const std::string& nameGame, const std::string& versio
 	log.body().AppendChild(CTML::Node("br"));
 	// инициализация панели управления
 	log.body().AppendChild(CTML::Node("h3", "Control panel: ")).
-		AppendChild(CTML::Node("input", "Critical errors:").SetAttribute("type", "checkbox").SetAttribute("checked", "").SetAttribute("id", "critical-error").SetAttribute("class", "panel-action").SetAttribute("onclick", "panel_action()")).
+		AppendChild(CTML::Node("input", "Critical errors").SetAttribute("type", "checkbox").SetAttribute("checked", "").SetAttribute("id", "critical-error").SetAttribute("class", "panel-action").SetAttribute("onclick", "panel_action()")).
 		AppendChild(CTML::Node("br")).
-		AppendChild(CTML::Node("input", "Errors:").SetAttribute("type", "checkbox").SetAttribute("checked", "").SetAttribute("id", "error").SetAttribute("class", "panel-action").SetAttribute("onclick", "panel_action()")).
+		AppendChild(CTML::Node("input", "Errors").SetAttribute("type", "checkbox").SetAttribute("checked", "").SetAttribute("id", "error").SetAttribute("class", "panel-action").SetAttribute("onclick", "panel_action()")).
 		AppendChild(CTML::Node("br")).
-		AppendChild(CTML::Node("input", "Warnings:").SetAttribute("type", "checkbox").SetAttribute("checked", "").SetAttribute("id", "warning").SetAttribute("class", "panel-action").SetAttribute("onclick", "panel_action()")).
+		AppendChild(CTML::Node("input", "Warnings").SetAttribute("type", "checkbox").SetAttribute("checked", "").SetAttribute("id", "warning").SetAttribute("class", "panel-action").SetAttribute("onclick", "panel_action()")).
 		AppendChild(CTML::Node("br")).
-		AppendChild(CTML::Node("input", "Messages:").SetAttribute("type", "checkbox").SetAttribute("checked", "").SetAttribute("id", "message").SetAttribute("class", "panel-action").SetAttribute("onclick", "panel_action()")).
+		AppendChild(CTML::Node("input", "Messages").SetAttribute("type", "checkbox").SetAttribute("checked", "").SetAttribute("id", "message").SetAttribute("class", "panel-action").SetAttribute("onclick", "panel_action()")).
 		AppendChild(CTML::Node("br"));
 
 	// инит таблицы

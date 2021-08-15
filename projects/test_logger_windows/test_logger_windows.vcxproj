@@ -93,7 +93,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -127,7 +127,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -154,6 +154,7 @@
     <ClCompile Include="..\..\logger\helpers\ConverterStringHelper.cpp" />
     <ClCompile Include="..\..\logger\helpers\StatusFunction.cpp" />
     <ClCompile Include="..\..\logger\logger\logger\helpers\LoggerParams.cpp" />
+    <ClCompile Include="..\..\logger\logger\logger\helpers\WindowsFormatMessage.cpp" />
     <ClCompile Include="..\..\logger\logger\logger\log.cpp" />
     <ClCompile Include="..\..\logger\logger\logger\Logger.cpp" />
     <ClCompile Include="..\..\logger\logger\logger\output\AndroidLogcatOutput.cpp" />
@@ -183,6 +184,7 @@
     <ClInclude Include="..\..\logger\logger\logger\helpers\StrConsts.h" />
     <ClInclude Include="..\..\logger\logger\logger\helpers\time_utils.h" />
     <ClInclude Include="..\..\logger\logger\logger\helpers\tuple_utils.h" />
+    <ClInclude Include="..\..\logger\logger\logger\helpers\WindowsFormatMessage.h" />
     <ClInclude Include="..\..\logger\logger\logger\log.h" />
     <ClInclude Include="..\..\logger\logger\logger\Logger.h" />
     <ClInclude Include="..\..\logger\logger\logger\messages\TypeMessages.h" />

@@ -2,29 +2,82 @@
 #include <string>
 
 #include "helpers/StatusFunction.h"
+#include "logger/logger/helpers/WindowsFormatMessage.h"
 
-int main()
+#include <windows.h> 
+#include <excpt.h>
+
+int _WinMainImpl(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow);
+int exception_filter(unsigned int code, struct _EXCEPTION_POINTERS* ep);
+int error_test();
+int error_test1();
+
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
 {
-    // аллоцируем консоль для теста
-    AllocConsole();
-    FILE* stream;
-    errno_t err;
-    err = freopen_s(&stream, "CONOUT$", "w", stdout);
-    //
+	int result(-1);
+	__try
+	{
+		result = _WinMainImpl(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+	}
+	__except (exception_filter(GetExceptionCode(), GetExceptionInformation()))
+	{
+		std::exit(-1);
+	}
+	return result;
+}
 
-    logger_init("log.html");
+int _WinMainImpl(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
+{
+	// аллоцируем консоль для теста
+	AllocConsole();
+	FILE* stream;
+	errno_t err;
+	err = freopen_s(&stream, "CONOUT$", "w", stdout);
+	//
 
-    printMessage("cock", 33, 45.f);
-    printError("sasa");
-    printWarning("as", 323);
+	logger_init("log.html");
 
-    checkError(true, "sad", 4);
-    checkWarning(true, "sadas", 443);
+	printMessage("cock", 33, 45.f);
+	printError("sasa");
+	printWarning("as", 323);
 
-    printCriticalError("sasdasda");
-    int a = 45;
-    a += 89;
-    checkCriticalError(true, 332, "sadas", 5);
-    checkCriticalError(true, 332, "sadas", 5);
+	checkError(true, "sad", 4);
+	checkWarning(true, "sadas", 443);
 
+	error_test();
+	printCriticalError("sasdasda");
+	int a = 45;
+	a += 89;
+	checkCriticalError(true, 332, "sadas", 5);
+	checkCriticalError(true, 332, "sadas", 5);
+	return 0;
+}
+
+int exception_filter(unsigned int code, struct _EXCEPTION_POINTERS* ep)
+{
+	/*if (code == EXCEPTION_ACCESS_VIOLATION)
+	{
+		return EXCEPTION_EXECUTE_HANDLER;
+	}
+	else
+	{
+		return EXCEPTION_CONTINUE_SEARCH;
+	};*/
+
+	printCriticalErrorForWindowsExceptionHandling(ep->ContextRecord, "Error windows structured exception: ", 
+		WindowsFormatMessage::GetErrorMessageException(code));
+	return EXCEPTION_EXECUTE_HANDLER;
+}
+
+int error_test()
+{
+	error_test1();
+	return 0;
+}
+
+int error_test1()
+{
+	int* a = nullptr;
+	*a = 45;
+	return 1;
 }

@@ -24,7 +24,7 @@ void WinAPIOutput::message(const LogType& lt, const std::string & str)
 	if (lt == LogType::LOG_CRITICAL_ERROR)
 	{
 		auto messageBuilder(CreatorMessagesTerminalOutput::create(lt));
-		auto msg(messageBuilder->createMessage(str) + "\nGetLastError WinAPI: " + std::to_string(GetLastError()));
+		auto msg(messageBuilder->createMessage(str));
 		MessageBoxA(NULL, msg.c_str(), "Critical error!", MB_OK);
 	}
 }

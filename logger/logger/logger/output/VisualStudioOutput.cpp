@@ -26,7 +26,7 @@ void VisualStudioOutput::init(const std::wstring& nameGame, const std::wstring& 
 void VisualStudioOutput::message(const LogType& lt, const std::string & str)
 {
 	auto messageBuilder(CreatorMessagesTerminalOutput::create(lt));
-	auto msg(messageBuilder->createMessage(str) + "GetLastError WinAPI: " + std::to_string(GetLastError()) + "\n");
+	auto msg(messageBuilder->createMessage(str));
 	OutputDebugStringA(msg.c_str());
 }
 

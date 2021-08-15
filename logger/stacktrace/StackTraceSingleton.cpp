@@ -16,32 +16,43 @@ std::string StackTraceSingleton::StackWalkerToString::getStackTrace()
 	return copy;
 }
 
-std::string StackTraceSingleton::getStacktraceForWindows()
+std::string StackTraceSingleton::getStacktraceForWindows(HANDLE hThread, const CONTEXT* context)
 {
-	sw.ShowCallstack();
+	sw.ShowCallstack(hThread, context);
 	return "Stack trace: \n" + sw.getStackTrace();
 }
 #endif
 
 std::unique_ptr<StackTraceSingleton> StackTraceSingleton::instance(nullptr);
 
- std::unique_ptr<StackTraceSingleton>& StackTraceSingleton::getInstance()
+std::unique_ptr<StackTraceSingleton>& StackTraceSingleton::getInstance()
 {
-	if(!instance)
-		instance.reset(new StackTraceSingleton);
+	 if (!instance)
+	 {
+		 instance.reset(new StackTraceSingleton);
 #ifdef _WIN32
-	instance->getStacktraceForWindows(); // first fake call
+		 instance->getStacktraceForWindows(); // first fake call
 #endif
+	 }
 	return instance;
 }
 
-std::string StackTraceSingleton::getStacktrace()
+std::string StackTraceSingleton::getStacktrace
+(
+#ifdef _WIN32
+	HANDLE hThread, const CONTEXT* context
+#endif
+)
 {
 	std::vector<std::string> lines;
+	std::string out = "Stack trace: \n";
 	int shiftStackTrace(0);
 #ifdef _WIN32
-	lines = splitter("\n", getStacktraceForWindows());
-	shiftStackTrace = 4;
+	if(context)
+		out.clear();
+	lines = splitter("\n", getStacktraceForWindows(hThread, context));
+	if(!context)
+		shiftStackTrace = 4;
 #elif __ANDROID__ 
 	const size_t max = 30;
 	void* buffer[max];
@@ -53,14 +64,14 @@ std::string StackTraceSingleton::getStacktrace()
 	lines = StackWalkerLinux::dumpBacktrace();
 	shiftStackTrace = 2; 
 #else
-	return "Stack trace: gig";
+	return "Stack trace: no implemented!";
 #endif
-	std::string out = std::accumulate(lines.begin() + shiftStackTrace, lines.end(), std::string{},
+	out += std::accumulate(lines.begin() + shiftStackTrace, lines.end(), std::string{},
 		[](std::string& start, const std::string& iter)
 		{
 			return start += iter + "\n";
 		});
-	return "Stack trace: \n" + out;
+	return out;
 }
 
 std::vector<std::string> StackTraceSingleton::splitter(const std::string in_pattern, const std::string& content)

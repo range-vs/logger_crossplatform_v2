@@ -42,6 +42,14 @@ namespace init_logger
     std::exit(-1);\
 }
 
+#ifdef _WIN32
+    #define printCriticalErrorForWindowsExceptionHandling(cr, ...) \
+    {\
+        log_critical_error(__VA_ARGS__, "\n" + StackTraceSingleton::getInstance()->getStacktrace(GetCurrentThread(), ep->ContextRecord)); \
+        std::exit(-1);\
+    }
+#endif
+
 #define printError(...) \
 {\
     log_error(__VA_ARGS__, "\n" + StackTraceSingleton::getInstance()->getStacktrace()); \

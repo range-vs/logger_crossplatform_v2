@@ -7,6 +7,10 @@
 #include "../../../../helpers/StatusFunction.h"
 #include "../../../html/ctml.hpp"
 
+#ifdef _WIN32
+#include "logger/logger/helpers/WindowsFormatMessage.h"
+#endif
+
 std::string MessageHTMLFileOutput::createTableLine(const std::string& msg)
 {
 	auto arrayStrings(ConverterStringHelper::split(msg, '\n'));
@@ -51,6 +55,9 @@ std::string CriticalErrorHTMLFileOutput::createTableLine(const std::string& msg)
 	CTML::Node th("th");
 	for (auto&& as : arrayStrings)
 		th.AppendChild(CTML::Node("p", as));
+#ifdef _WIN32
+	th.AppendChild(CTML::Node("p", "\nGetLastError WinAPI: " + WindowsFormatMessage::GetErrorMessage(GetLastError())));
+#endif
 	row.AppendChild(th);
 	return row.ToString();
 }

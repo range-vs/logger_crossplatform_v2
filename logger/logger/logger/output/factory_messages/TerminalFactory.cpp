@@ -3,6 +3,9 @@
 #include "TerminalFactory.h"
 #include "../../../../helpers/StatusFunction.h"
 
+#ifdef _WIN32
+#include "logger/logger/helpers/WindowsFormatMessage.h"
+#endif
 
 std::string MessageTerminalOutput::createMessage(const std::string& msg)
 {
@@ -21,7 +24,11 @@ std::string ErrorTerminalOutput::createMessage(const std::string& msg)
 
 std::string CriticalErrorTerminalOutput::createMessage(const std::string& msg)
 {
-	return "CRITICAL ERROR: " + msg;
+	return "CRITICAL ERROR: " + msg
+#ifdef _WIN32
+		 + "\nGetLastError WinAPI: " + WindowsFormatMessage::GetErrorMessage(GetLastError())
+#endif
+	;
 }
 
 std::map<LogType, std::shared_ptr<BaseMessageTerminalOutput>> CreatorMessagesTerminalOutput::messageCreators

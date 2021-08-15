@@ -20,7 +20,7 @@ class StackTraceSingleton
         std::string getStackTrace();
     };
     StackWalkerToString sw;
-    std::string getStacktraceForWindows();
+    std::string getStacktraceForWindows(HANDLE hThread = GetCurrentThread(), const CONTEXT* context = nullptr);
 #elif __ANDROID__
     StackWalkerAndroid swa;
 #endif
@@ -38,6 +38,9 @@ public:
 
     static std::unique_ptr<StackTraceSingleton>& getInstance();
 
-    std::string getStacktrace();
-
+    std::string getStacktrace(
+#ifdef _WIN32
+        HANDLE hThread = GetCurrentThread(), const CONTEXT* context = nullptr
+#endif
+    );
 };

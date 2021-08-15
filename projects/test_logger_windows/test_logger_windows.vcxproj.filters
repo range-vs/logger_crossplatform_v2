@@ -65,6 +65,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\logger\logger\logger\helpers\WindowsFormatMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\logger\logger\logger\helpers\StrConsts.h">
@@ -134,6 +137,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\logger\logger\logger\output\factory_messages\HTMLFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\logger\logger\logger\helpers\WindowsFormatMessage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
