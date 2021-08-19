@@ -19,11 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    std::string homeDir(getenv("HOME") + std::string("/Documents/log.html"));
-    NSString* _data = [[NSString alloc] initWithUTF8String:homeDir.c_str()];
+        
+    const char* pathToFile = [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"log.html"] UTF8String];
+    NSString* _data = [[NSString alloc] initWithUTF8String:pathToFile];
     NSLog(@"[ALIEN_ENGINE] Path to log-file from iOS: %@", _data);
-    logger_init(homeDir);
+    logger_init(pathToFile);
 
     printMessage("cock", 33, 45.f);
     printError("sasa");

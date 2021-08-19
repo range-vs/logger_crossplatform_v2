@@ -423,6 +423,7 @@
 				DEVELOPMENT_TEAM = 3L2TBFNKQ7;
 				HEADER_SEARCH_PATHS = ../../logger/;
 				INFOPLIST_FILE = test_logger_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,6 +444,7 @@
 				DEVELOPMENT_TEAM = 3L2TBFNKQ7;
 				HEADER_SEARCH_PATHS = ../../logger/;
 				INFOPLIST_FILE = test_logger_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
