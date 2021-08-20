@@ -1,10 +1,11 @@
 #include "pch.h"
 #include <jni.h>
 #include <string>
+#include <csignal>
 
 #include "helpers/StatusFunction.h"
 
-void _logger_init(JNIEnv *pEnv, jobject pJobject, std::string basicString);
+void SIGABRT_handler(int sig);
 
 extern "C" JNIEXPORT void JNICALL
 Java_com_test_logger_android_MainActivity_initLogger(
@@ -16,11 +17,17 @@ Java_com_test_logger_android_MainActivity_initLogger(
     jboolean isCopy;
     std::string convertedValue = env->GetStringUTFChars(pathLog, &isCopy);
 
+    signal(SIGABRT, SIGABRT_handler);
+    signal(SIGSEGV, SIGABRT_handler);
+
     logger_init(env, activity, convertedValue);
 
     printMessage("cock", 33, 45.f);
     printError("sasa");
     printWarning("as", 323);
+
+    int*b = nullptr;
+    *b = 45;
 
     checkError(true, "sad", 4);
     checkWarning(true, "sadas", 443);
@@ -32,4 +39,9 @@ Java_com_test_logger_android_MainActivity_initLogger(
     checkCriticalError(true, 332, "sadas", 5);
 
 
+}
+
+void SIGABRT_handler(int sig)
+{
+    printCriticalError("Signal: ", sig);
 }
