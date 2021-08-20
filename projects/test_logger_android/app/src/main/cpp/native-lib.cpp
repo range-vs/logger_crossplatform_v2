@@ -5,7 +5,7 @@
 
 #include "helpers/StatusFunction.h"
 
-void SIGABRT_handler(int sig);
+void signal_handler(int sig);
 
 extern "C" JNIEXPORT void JNICALL
 Java_com_test_logger_android_MainActivity_initLogger(
@@ -17,8 +17,8 @@ Java_com_test_logger_android_MainActivity_initLogger(
     jboolean isCopy;
     std::string convertedValue = env->GetStringUTFChars(pathLog, &isCopy);
 
-    signal(SIGABRT, SIGABRT_handler);
-    signal(SIGSEGV, SIGABRT_handler);
+    signal(SIGABRT, signal_handler);
+    signal(SIGSEGV, signal_handler);
 
     logger_init(env, activity, convertedValue);
 
@@ -41,7 +41,7 @@ Java_com_test_logger_android_MainActivity_initLogger(
 
 }
 
-void SIGABRT_handler(int sig)
+void signal_handler(int sig)
 {
     printCriticalError("Signal: ", sig);
 }
