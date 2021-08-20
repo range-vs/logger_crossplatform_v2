@@ -58,7 +58,7 @@
 		667F785C26C7BB460073869F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		667F785F26C7BB460073869F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		667F786126C7BB460073869F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		667F786226C7BB460073869F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		667F786226C7BB460073869F /* main.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = main.m; sourceTree = "<group>"; };
 		667F786926C7BBAA0073869F /* pch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pch.cpp; path = ../../logger/pch.cpp; sourceTree = "<group>"; };
 		667F786A26C7BBAA0073869F /* pch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pch.h; path = ../../logger/pch.h; sourceTree = "<group>"; };
 		667F786D26C7BBB80073869F /* ConverterStringHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ConverterStringHelper.cpp; path = ../../logger/helpers/ConverterStringHelper.cpp; sourceTree = "<group>"; };
@@ -421,6 +421,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3L2TBFNKQ7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					_IOS,
+					"$(inherited)",
+				);
 				HEADER_SEARCH_PATHS = ../../logger/;
 				INFOPLIST_FILE = test_logger_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -442,6 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3L2TBFNKQ7;
+				GCC_PREPROCESSOR_DEFINITIONS = _IOS;
 				HEADER_SEARCH_PATHS = ../../logger/;
 				INFOPLIST_FILE = test_logger_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

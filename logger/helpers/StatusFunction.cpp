@@ -34,11 +34,11 @@ namespace init_logger
         std::shared_ptr<HTMLFileOutput> htmlFileOutput(std::make_shared<HTMLFileOutput>());
         htmlFileOutput->setPathFile(path);
         std::shared_ptr<AppleTerminalOutput> terminalOutput(std::make_shared<AppleTerminalOutput>());
-        #ifndef TARGET_OS_IPHONE
+        #ifdef _MAC
         std::shared_ptr<MacOutput> macOutput(std::make_shared<MacOutput>());
         #endif
         log_init("alien engine", "0.0.1", htmlFileOutput, terminalOutput
-        #ifndef TARGET_OS_IPHONE
+        #ifdef _MAC
         , macOutput
         #endif
         );
