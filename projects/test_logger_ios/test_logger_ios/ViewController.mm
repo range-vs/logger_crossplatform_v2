@@ -11,6 +11,10 @@
 
 #include "helpers/StatusFunction.h"
 
+#include <csignal>
+
+void signal_handler(int sig);
+
 @interface ViewController ()
 
 @end
@@ -19,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    signal(SIGABRT, signal_handler);
+    signal(SIGSEGV, signal_handler);
         
     const char* pathToFile = [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"log.html"] UTF8String];
     NSString* _data = [[NSString alloc] initWithUTF8String:pathToFile];
@@ -28,6 +35,9 @@
     printMessage("cock", 33, 45.f);
     printError("sasa");
     printWarning("as", 323);
+    
+    int*b = nullptr;
+    *b = 45;
 
     checkError(true, "sad", 4);
     checkWarning(true, "sadas", 443);
@@ -42,3 +52,8 @@
 
 
 @end
+
+void signal_handler(int sig)
+{
+    printCriticalError("Signal: ", sig);
+}
