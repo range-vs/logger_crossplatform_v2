@@ -15,6 +15,7 @@
 #include <csignal>
 
 void signal_handler(int sig);
+const char* getLogsPathWithFile();
 
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
@@ -26,7 +27,7 @@ int main(int argc, char * argv[]) {
     signal(SIGABRT, signal_handler);
     signal(SIGSEGV, signal_handler);
         
-    const char* pathToFile = [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"log.html"] UTF8String];
+    const char* pathToFile = getLogsPathWithFile();
     NSString* _data = [[NSString alloc] initWithUTF8String:pathToFile];
     NSLog(@"[ALIEN_ENGINE] Path to log-file from iOS: %@", _data);
     logger_init(pathToFile);
@@ -53,4 +54,9 @@ int main(int argc, char * argv[]) {
 void signal_handler(int sig)
 {
     printCriticalError("Signal: ", sig);
+}
+
+const char* getLogsPathWithFile()
+{
+    return [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"log.html"] UTF8String];
 }

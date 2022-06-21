@@ -46,9 +46,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public static String getLogsPath() throws Exception {
+        String suffix = "/" + App.getApp().getPackageName() + "/logs/";
+        String[] paths = {  Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath() + suffix,
+                            App.getApp().getFilesDir().getPath() + "/logs/" };
+
+        for( int i = 0; i < paths.length; ++i) {
+            File f = new File(paths[i]);
+            f.mkdirs();
+            if( f.canWrite() && f.canRead()) {
+                return paths[i];
+            }
+        }
+
+        throw new Exception("getLogsPath() is unable to find appropriate logs directory. You should check permissions or something...");
+    }
+
     void initLogger(){
         // init logger cpp
-        initLogger("/sdcard/Documents/log.html", this);
+        initLogger(getLogsPath() + "log.html", this);
     }
 
     public void verifyStoragePermissions(Activity activity) {

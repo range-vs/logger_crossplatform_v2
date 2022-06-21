@@ -15,12 +15,12 @@ Java_com_test_logger_android_MainActivity_initLogger(
         jobject activity)
 {
     jboolean isCopy;
-    std::string convertedValue = env->GetStringUTFChars(pathLog, &isCopy);
+    std::string pathToLogFile = env->GetStringUTFChars(pathLog, &isCopy);
 
     signal(SIGABRT, signal_handler);
     signal(SIGSEGV, signal_handler);
 
-    logger_init(env, activity, convertedValue);
+    logger_init(env, activity, pathToLogFile);
 
     printMessage("cock", 33, 45.f);
     printError("sasa");
