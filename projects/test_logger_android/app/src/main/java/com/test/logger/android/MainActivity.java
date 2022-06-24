@@ -11,22 +11,20 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.widget.ActionMenuView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     static {
         System.loadLibrary("native-lib");
     }
-
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] PERMISSIONS_STORAGE = {
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.MANAGE_EXTERNAL_STORAGE
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +34,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = findViewById(R.id.sample_text);
         tv.setText("Test logger app");
 
-        //Toast.makeText(null, "test", Toast.LENGTH_LONG).show();
-
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
-            verifyStoragePermissions(this);
-        }
-
-
+        initLogger();
 
     }
 
@@ -64,39 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
     void initLogger(){
         // init logger cpp
-        initLogger(getLogsPath() + "log.html", this);
-    }
-
-    public void verifyStoragePermissions(Activity activity) {
-        // Check if we have write permission
-        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.MANAGE_EXTERNAL_STORAGE);
-
-        if (permission != PackageManager.PERMISSION_GRANTED) {
-            // We don't have permission so prompt the user
-            ActivityCompat.requestPermissions(
-                    activity,
-                    PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE
-            );
-        }else{
-            initLogger();
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case 1:
-                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    initLogger();
-                    Toast.makeText(this, "Permission Granted" , Toast.LENGTH_LONG).show();
-                } else {
-                    //permission with request code 1 was not granted
-                    Toast.makeText(this, "Permission was not Granted" , Toast.LENGTH_LONG).show();
-                }
-                break;
-            default:
-                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        try {
+            initLogger(getLogsPath() + "log.html", this);
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+            e.printStackTrace();
         }
     }
 

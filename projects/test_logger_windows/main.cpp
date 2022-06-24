@@ -2,7 +2,7 @@
 #include <string>
 
 #include "helpers/StatusFunction.h"
-#include "logger/logger/helpers/WindowsFormatMessage.h"
+#include "logger/core/helpers/WindowsFormatMessage.h"
 
 #include <windows.h> 
 #include <excpt.h>

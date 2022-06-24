@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test_logger_android"
         android:requestLegacyExternalStorage="true"
+        android:name=".App"
         >
         <activity android:name=".MainActivity">
             <intent-filter>

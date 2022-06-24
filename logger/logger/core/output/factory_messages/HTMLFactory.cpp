@@ -8,7 +8,7 @@
 #include "../../../html/ctml.hpp"
 
 #ifdef _WIN32
-#include "logger/logger/helpers/WindowsFormatMessage.h"
+#include "logger/core/helpers/WindowsFormatMessage.h"
 #endif
 
 std::string MessageHTMLFileOutput::createTableLine(const std::string& msg)

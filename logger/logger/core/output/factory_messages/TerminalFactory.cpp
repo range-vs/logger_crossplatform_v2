@@ -4,7 +4,7 @@
 #include "../../../../helpers/StatusFunction.h"
 
 #ifdef _WIN32
-#include "logger/logger/helpers/WindowsFormatMessage.h"
+#include "logger/core/helpers/WindowsFormatMessage.h"
 #endif
 
 std::string MessageTerminalOutput::createMessage(const std::string& msg)

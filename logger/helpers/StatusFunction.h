@@ -8,7 +8,7 @@
     #include <TargetConditionals.h>
 #endif
 
-#include "../logger/logger/log.h"
+#include "../logger/core/log.h"
 #include "../stacktrace/StackTraceSingleton.h"
 
 namespace stat_func

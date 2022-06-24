@@ -29,26 +29,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -153,25 +153,19 @@
   <ItemGroup>
     <ClCompile Include="..\..\logger\helpers\ConverterStringHelper.cpp" />
     <ClCompile Include="..\..\logger\helpers\StatusFunction.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\helpers\LoggerParams.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\helpers\WindowsFormatMessage.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\log.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\Logger.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\output\AndroidLogcatOutput.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\output\AndroidToastOutput.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\output\factory_messages\HTMLFactory.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\output\factory_messages\TerminalFactory.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\output\HTMLFileOutput.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\output\TerminalOutput.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\output\VisualStudioOutput.cpp" />
-    <ClCompile Include="..\..\logger\logger\logger\output\WinAPIOutput.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\helpers\LoggerParams.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\helpers\WindowsFormatMessage.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\log.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\Logger.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\output\factory_messages\HTMLFactory.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\output\factory_messages\TerminalFactory.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\output\HTMLFileOutput.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\output\TerminalOutput.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\output\VisualStudioOutput.cpp" />
+    <ClCompile Include="..\..\logger\logger\core\output\WinAPIOutput.cpp" />
     <ClCompile Include="..\..\logger\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\..\logger\stacktrace\android\stacktrace_android.cpp" />
     <ClCompile Include="..\..\logger\stacktrace\StackTraceSingleton.cpp" />
     <ClCompile Include="..\..\logger\stacktrace\windows\StackWalker.cpp" />
     <ClCompile Include="main.cpp" />
@@ -179,26 +173,23 @@
   <ItemGroup>
     <ClInclude Include="..\..\logger\helpers\ConverterStringHelper.h" />
     <ClInclude Include="..\..\logger\helpers\StatusFunction.h" />
+    <ClInclude Include="..\..\logger\logger\core\helpers\LoggerParams.h" />
+    <ClInclude Include="..\..\logger\logger\core\helpers\StrConsts.h" />
+    <ClInclude Include="..\..\logger\logger\core\helpers\time_utils.h" />
+    <ClInclude Include="..\..\logger\logger\core\helpers\tuple_utils.h" />
+    <ClInclude Include="..\..\logger\logger\core\helpers\WindowsFormatMessage.h" />
+    <ClInclude Include="..\..\logger\logger\core\log.h" />
+    <ClInclude Include="..\..\logger\logger\core\Logger.h" />
+    <ClInclude Include="..\..\logger\logger\core\messages\TypeMessages.h" />
+    <ClInclude Include="..\..\logger\logger\core\output\BaseOutput.h" />
+    <ClInclude Include="..\..\logger\logger\core\output\factory_messages\HTMLFactory.h" />
+    <ClInclude Include="..\..\logger\logger\core\output\factory_messages\TerminalFactory.h" />
+    <ClInclude Include="..\..\logger\logger\core\output\HTMLFileOutput.h" />
+    <ClInclude Include="..\..\logger\logger\core\output\TerminalOutput.h" />
+    <ClInclude Include="..\..\logger\logger\core\output\VisualStudioOutput.h" />
+    <ClInclude Include="..\..\logger\logger\core\output\WinAPIOutput.h" />
     <ClInclude Include="..\..\logger\logger\html\ctml.hpp" />
-    <ClInclude Include="..\..\logger\logger\logger\helpers\LoggerParams.h" />
-    <ClInclude Include="..\..\logger\logger\logger\helpers\StrConsts.h" />
-    <ClInclude Include="..\..\logger\logger\logger\helpers\time_utils.h" />
-    <ClInclude Include="..\..\logger\logger\logger\helpers\tuple_utils.h" />
-    <ClInclude Include="..\..\logger\logger\logger\helpers\WindowsFormatMessage.h" />
-    <ClInclude Include="..\..\logger\logger\logger\log.h" />
-    <ClInclude Include="..\..\logger\logger\logger\Logger.h" />
-    <ClInclude Include="..\..\logger\logger\logger\messages\TypeMessages.h" />
-    <ClInclude Include="..\..\logger\logger\logger\output\AndroidLogcatOutput.h" />
-    <ClInclude Include="..\..\logger\logger\logger\output\AndroidToastOutput.h" />
-    <ClInclude Include="..\..\logger\logger\logger\output\BaseOutput.h" />
-    <ClInclude Include="..\..\logger\logger\logger\output\factory_messages\HTMLFactory.h" />
-    <ClInclude Include="..\..\logger\logger\logger\output\factory_messages\TerminalFactory.h" />
-    <ClInclude Include="..\..\logger\logger\logger\output\HTMLFileOutput.h" />
-    <ClInclude Include="..\..\logger\logger\logger\output\TerminalOutput.h" />
-    <ClInclude Include="..\..\logger\logger\logger\output\VisualStudioOutput.h" />
-    <ClInclude Include="..\..\logger\logger\logger\output\WinAPIOutput.h" />
     <ClInclude Include="..\..\logger\pch.h" />
-    <ClInclude Include="..\..\logger\stacktrace\android\stacktrace_android.h" />
     <ClInclude Include="..\..\logger\stacktrace\StackTraceSingleton.h" />
     <ClInclude Include="..\..\logger\stacktrace\windows\StackWalker.h" />
   </ItemGroup>
