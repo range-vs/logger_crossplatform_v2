@@ -26,7 +26,7 @@ namespace init_logger
         std::shared_ptr<HTMLFileOutput> htmlFileOutput(std::make_shared<HTMLFileOutput>()); 
         htmlFileOutput->setPathFile(path); 
         std::shared_ptr<TerminalOutput> terminalOutput(std::make_shared<TerminalOutput>()); 
-        log_init("alien engine", "0.0.1", htmlFileOutput, terminalOutput, visualStudioOutput, winApiOutput); 
+        log_init("app_name", "0.0.1", htmlFileOutput, terminalOutput, visualStudioOutput, winApiOutput); 
     }
 #elif __APPLE__
     void _logger_init(const std::string& path)
@@ -37,7 +37,7 @@ namespace init_logger
         #ifdef _MAC
         std::shared_ptr<MacOutput> macOutput(std::make_shared<MacOutput>());
         #endif
-        log_init("alien engine", "0.0.1", htmlFileOutput, terminalOutput
+        log_init("app_name", "0.0.1", htmlFileOutput, terminalOutput
         #ifdef _MAC
         , macOutput
         #endif
@@ -50,7 +50,7 @@ namespace init_logger
         htmlFileOutput->setPathFile(path);
         std::shared_ptr<AndroidLogcatOutput> androidLogcatOutput(std::make_shared<AndroidLogcatOutput>()); 
         std::shared_ptr<TerminalOutput> terminalOutput(std::make_shared<TerminalOutput>());
-        log_init("alien engine", "0.0.1", htmlFileOutput, terminalOutput, androidLogcatOutput);
+        log_init("app_name", "0.0.1", htmlFileOutput, terminalOutput, androidLogcatOutput);
     }
 #elif __linux__
     void _logger_init(const std::string& path)
@@ -58,7 +58,7 @@ namespace init_logger
         std::shared_ptr<HTMLFileOutput> htmlFileOutput(std::make_shared<HTMLFileOutput>());
         htmlFileOutput->setPathFile(path);
         std::shared_ptr<TerminalOutput> terminalOutput(std::make_shared<TerminalOutput>());
-        log_init("alien engine", "0.0.1", htmlFileOutput, terminalOutput);
+        log_init("app_name", "0.0.1", htmlFileOutput, terminalOutput);
     }
 #endif
 }
