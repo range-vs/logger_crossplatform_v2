@@ -3,6 +3,7 @@
 Writes completely different information to various sources. Instruction:
 Please, include your project this file:
 ```logger\logger\core\log.h```
+
 First, initialize the logger using the log_init method, and pass the application name, its version (you can also send empty lines) and initialization parameters (platform specific) into it. 
 
 Next, call one of four methods, depending on the logging:
