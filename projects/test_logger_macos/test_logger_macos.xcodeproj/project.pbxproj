@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		366F784228663A5200BA33A3 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 366F783F28663A5200BA33A3 /* Logger.cpp */; };
+		366F784328663A5200BA33A3 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 366F784028663A5200BA33A3 /* log.cpp */; };
+		366F784D28663ACE00BA33A3 /* HTMLFileOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 366F784428663ACD00BA33A3 /* HTMLFileOutput.cpp */; };
+		366F784E28663ACE00BA33A3 /* TerminalOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 366F784528663ACD00BA33A3 /* TerminalOutput.cpp */; };
+		366F784F28663ACE00BA33A3 /* MacOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = 366F784628663ACE00BA33A3 /* MacOutput.mm */; };
+		366F785028663ACE00BA33A3 /* AppleTerminalOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = 366F784A28663ACE00BA33A3 /* AppleTerminalOutput.mm */; };
+		366F785528663B0800BA33A3 /* HTMLFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 366F785128663B0800BA33A3 /* HTMLFactory.cpp */; };
+		366F785628663B0800BA33A3 /* TerminalFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 366F785428663B0800BA33A3 /* TerminalFactory.cpp */; };
 		667F77D626C57DB80073869F /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 667F77D526C57DB80073869F /* main.mm */; };
 		667F77ED26C5C9EF0073869F /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77EB26C5C9EF0073869F /* pch.cpp */; };
 		667F77EE26C5C9EF0073869F /* pch.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F77EC26C5C9EF0073869F /* pch.h */; };
@@ -15,31 +23,10 @@
 		667F77F526C5C9FF0073869F /* ConverterStringHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77F126C5C9FF0073869F /* ConverterStringHelper.cpp */; };
 		667F77F626C5C9FF0073869F /* StatusFunction.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F77F226C5C9FF0073869F /* StatusFunction.h */; };
 		667F77F826C5CA0E0073869F /* ctml.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77F726C5CA0E0073869F /* ctml.hpp */; };
-		667F77FD26C5CA240073869F /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77F926C5CA240073869F /* log.cpp */; };
-		667F77FE26C5CA240073869F /* Logger.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F77FA26C5CA240073869F /* Logger.h */; };
-		667F77FF26C5CA240073869F /* log.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F77FB26C5CA240073869F /* log.h */; };
-		667F780026C5CA240073869F /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F77FC26C5CA240073869F /* Logger.cpp */; };
-		667F780626C5CA4A0073869F /* LoggerParams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F780126C5CA4A0073869F /* LoggerParams.cpp */; };
-		667F780726C5CA4A0073869F /* StrConsts.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780226C5CA4A0073869F /* StrConsts.h */; };
-		667F780826C5CA4A0073869F /* time_utils.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780326C5CA4A0073869F /* time_utils.h */; };
-		667F780926C5CA4A0073869F /* tuple_utils.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780426C5CA4A0073869F /* tuple_utils.h */; };
-		667F780A26C5CA4A0073869F /* LoggerParams.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780526C5CA4A0073869F /* LoggerParams.h */; };
-		667F780C26C5CA5B0073869F /* TypeMessages.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F780B26C5CA5B0073869F /* TypeMessages.h */; };
-		667F781B26C5CA6E0073869F /* HTMLFileOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F780E26C5CA6D0073869F /* HTMLFileOutput.cpp */; };
-		667F781E26C5CA6E0073869F /* HTMLFileOutput.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F781126C5CA6D0073869F /* HTMLFileOutput.h */; };
-		667F782026C5CA6E0073869F /* TerminalOutput.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F781326C5CA6D0073869F /* TerminalOutput.h */; };
-		667F782326C5CA6E0073869F /* BaseOutput.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F781626C5CA6E0073869F /* BaseOutput.h */; };
-		667F782426C5CA6E0073869F /* TerminalOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F781726C5CA6E0073869F /* TerminalOutput.cpp */; };
-		667F782B26C5CA830073869F /* HTMLFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F782726C5CA830073869F /* HTMLFactory.cpp */; };
-		667F782C26C5CA830073869F /* TerminalFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F782826C5CA830073869F /* TerminalFactory.cpp */; };
-		667F782D26C5CA830073869F /* HTMLFactory.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F782926C5CA830073869F /* HTMLFactory.h */; };
-		667F782E26C5CA830073869F /* TerminalFactory.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F782A26C5CA830073869F /* TerminalFactory.h */; };
 		667F783126C5CAB00073869F /* StackTraceSingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F782F26C5CAB00073869F /* StackTraceSingleton.cpp */; };
 		667F783226C5CAB00073869F /* StackTraceSingleton.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F783026C5CAB00073869F /* StackTraceSingleton.h */; };
 		667F783526C5CAD40073869F /* stacktrace_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667F783326C5CAD40073869F /* stacktrace_linux.cpp */; };
 		667F783626C5CAD40073869F /* stacktrace_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = 667F783426C5CAD40073869F /* stacktrace_linux.h */; };
-		667F783D26C72F810073869F /* AppleTerminalOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = 667F783B26C72F810073869F /* AppleTerminalOutput.mm */; };
-		667F784026C733010073869F /* MacOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = 667F783E26C733010073869F /* MacOutput.mm */; };
 		667F784326C7353F0073869F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667F784226C7353F0073869F /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +43,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		366F783E28663A5200BA33A3 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log.h; path = ../../logger/logger/core/log.h; sourceTree = "<group>"; };
+		366F783F28663A5200BA33A3 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = ../../logger/logger/core/Logger.cpp; sourceTree = "<group>"; };
+		366F784028663A5200BA33A3 /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = ../../logger/logger/core/log.cpp; sourceTree = "<group>"; };
+		366F784128663A5200BA33A3 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = ../../logger/logger/core/Logger.h; sourceTree = "<group>"; };
+		366F784428663ACD00BA33A3 /* HTMLFileOutput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HTMLFileOutput.cpp; path = ../../logger/logger/core/output/HTMLFileOutput.cpp; sourceTree = "<group>"; };
+		366F784528663ACD00BA33A3 /* TerminalOutput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TerminalOutput.cpp; path = ../../logger/logger/core/output/TerminalOutput.cpp; sourceTree = "<group>"; };
+		366F784628663ACE00BA33A3 /* MacOutput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacOutput.mm; path = ../../logger/logger/core/output/MacOutput.mm; sourceTree = "<group>"; };
+		366F784728663ACE00BA33A3 /* HTMLFileOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLFileOutput.h; path = ../../logger/logger/core/output/HTMLFileOutput.h; sourceTree = "<group>"; };
+		366F784828663ACE00BA33A3 /* TerminalOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerminalOutput.h; path = ../../logger/logger/core/output/TerminalOutput.h; sourceTree = "<group>"; };
+		366F784928663ACE00BA33A3 /* MacOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacOutput.h; path = ../../logger/logger/core/output/MacOutput.h; sourceTree = "<group>"; };
+		366F784A28663ACE00BA33A3 /* AppleTerminalOutput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppleTerminalOutput.mm; path = ../../logger/logger/core/output/AppleTerminalOutput.mm; sourceTree = "<group>"; };
+		366F784B28663ACE00BA33A3 /* BaseOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseOutput.h; path = ../../logger/logger/core/output/BaseOutput.h; sourceTree = "<group>"; };
+		366F784C28663ACE00BA33A3 /* AppleTerminalOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleTerminalOutput.h; path = ../../logger/logger/core/output/AppleTerminalOutput.h; sourceTree = "<group>"; };
+		366F785128663B0800BA33A3 /* HTMLFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HTMLFactory.cpp; path = ../../logger/logger/core/output/factory_messages/HTMLFactory.cpp; sourceTree = "<group>"; };
+		366F785228663B0800BA33A3 /* HTMLFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLFactory.h; path = ../../logger/logger/core/output/factory_messages/HTMLFactory.h; sourceTree = "<group>"; };
+		366F785328663B0800BA33A3 /* TerminalFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerminalFactory.h; path = ../../logger/logger/core/output/factory_messages/TerminalFactory.h; sourceTree = "<group>"; };
+		366F785428663B0800BA33A3 /* TerminalFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TerminalFactory.cpp; path = ../../logger/logger/core/output/factory_messages/TerminalFactory.cpp; sourceTree = "<group>"; };
 		667F77D226C57DB80073869F /* test_logger_macos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_logger_macos; sourceTree = BUILT_PRODUCTS_DIR; };
 		667F77D526C57DB80073869F /* main.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		667F77EB26C5C9EF0073869F /* pch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = pch.cpp; path = ../../logger/pch.cpp; sourceTree = "<group>"; };
@@ -65,33 +69,10 @@
 		667F77F126C5C9FF0073869F /* ConverterStringHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ConverterStringHelper.cpp; path = ../../logger/helpers/ConverterStringHelper.cpp; sourceTree = "<group>"; };
 		667F77F226C5C9FF0073869F /* StatusFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StatusFunction.h; path = ../../logger/helpers/StatusFunction.h; sourceTree = "<group>"; };
 		667F77F726C5CA0E0073869F /* ctml.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ctml.hpp; path = ../../logger/logger/html/ctml.hpp; sourceTree = "<group>"; };
-		667F77F926C5CA240073869F /* log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = ../../logger/logger/logger/log.cpp; sourceTree = "<group>"; };
-		667F77FA26C5CA240073869F /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = ../../logger/logger/logger/Logger.h; sourceTree = "<group>"; };
-		667F77FB26C5CA240073869F /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = log.h; path = ../../logger/logger/logger/log.h; sourceTree = "<group>"; };
-		667F77FC26C5CA240073869F /* Logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = ../../logger/logger/logger/Logger.cpp; sourceTree = "<group>"; };
-		667F780126C5CA4A0073869F /* LoggerParams.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LoggerParams.cpp; path = ../../logger/logger/logger/helpers/LoggerParams.cpp; sourceTree = "<group>"; };
-		667F780226C5CA4A0073869F /* StrConsts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StrConsts.h; path = ../../logger/logger/logger/helpers/StrConsts.h; sourceTree = "<group>"; };
-		667F780326C5CA4A0073869F /* time_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = time_utils.h; path = ../../logger/logger/logger/helpers/time_utils.h; sourceTree = "<group>"; };
-		667F780426C5CA4A0073869F /* tuple_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tuple_utils.h; path = ../../logger/logger/logger/helpers/tuple_utils.h; sourceTree = "<group>"; };
-		667F780526C5CA4A0073869F /* LoggerParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoggerParams.h; path = ../../logger/logger/logger/helpers/LoggerParams.h; sourceTree = "<group>"; };
-		667F780B26C5CA5B0073869F /* TypeMessages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TypeMessages.h; path = ../../logger/logger/logger/messages/TypeMessages.h; sourceTree = "<group>"; };
-		667F780E26C5CA6D0073869F /* HTMLFileOutput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HTMLFileOutput.cpp; path = ../../logger/logger/logger/output/HTMLFileOutput.cpp; sourceTree = "<group>"; };
-		667F781126C5CA6D0073869F /* HTMLFileOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HTMLFileOutput.h; path = ../../logger/logger/logger/output/HTMLFileOutput.h; sourceTree = "<group>"; };
-		667F781326C5CA6D0073869F /* TerminalOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TerminalOutput.h; path = ../../logger/logger/logger/output/TerminalOutput.h; sourceTree = "<group>"; };
-		667F781626C5CA6E0073869F /* BaseOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BaseOutput.h; path = ../../logger/logger/logger/output/BaseOutput.h; sourceTree = "<group>"; };
-		667F781726C5CA6E0073869F /* TerminalOutput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TerminalOutput.cpp; path = ../../logger/logger/logger/output/TerminalOutput.cpp; sourceTree = "<group>"; };
-		667F782726C5CA830073869F /* HTMLFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HTMLFactory.cpp; path = ../../logger/logger/logger/output/factory_messages/HTMLFactory.cpp; sourceTree = "<group>"; };
-		667F782826C5CA830073869F /* TerminalFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TerminalFactory.cpp; path = ../../logger/logger/logger/output/factory_messages/TerminalFactory.cpp; sourceTree = "<group>"; };
-		667F782926C5CA830073869F /* HTMLFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HTMLFactory.h; path = ../../logger/logger/logger/output/factory_messages/HTMLFactory.h; sourceTree = "<group>"; };
-		667F782A26C5CA830073869F /* TerminalFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TerminalFactory.h; path = ../../logger/logger/logger/output/factory_messages/TerminalFactory.h; sourceTree = "<group>"; };
 		667F782F26C5CAB00073869F /* StackTraceSingleton.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = StackTraceSingleton.cpp; path = ../../logger/stacktrace/StackTraceSingleton.cpp; sourceTree = "<group>"; };
 		667F783026C5CAB00073869F /* StackTraceSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StackTraceSingleton.h; path = ../../logger/stacktrace/StackTraceSingleton.h; sourceTree = "<group>"; };
 		667F783326C5CAD40073869F /* stacktrace_linux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stacktrace_linux.cpp; path = ../../logger/stacktrace/linux/stacktrace_linux.cpp; sourceTree = "<group>"; };
 		667F783426C5CAD40073869F /* stacktrace_linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stacktrace_linux.h; path = ../../logger/stacktrace/linux/stacktrace_linux.h; sourceTree = "<group>"; };
-		667F783B26C72F810073869F /* AppleTerminalOutput.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; fileEncoding = 4; name = AppleTerminalOutput.mm; path = ../../logger/logger/logger/output/AppleTerminalOutput.mm; sourceTree = "<group>"; };
-		667F783C26C72F810073869F /* AppleTerminalOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleTerminalOutput.h; path = ../../logger/logger/logger/output/AppleTerminalOutput.h; sourceTree = "<group>"; };
-		667F783E26C733010073869F /* MacOutput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacOutput.mm; path = ../../logger/logger/logger/output/MacOutput.mm; sourceTree = "<group>"; };
-		667F783F26C733010073869F /* MacOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacOutput.h; path = ../../logger/logger/logger/output/MacOutput.h; sourceTree = "<group>"; };
 		667F784226C7353F0073869F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -136,33 +117,27 @@
 		667F783726C5CB9A0073869F /* logger_src */ = {
 			isa = PBXGroup;
 			children = (
-				667F783F26C733010073869F /* MacOutput.h */,
-				667F783E26C733010073869F /* MacOutput.mm */,
-				667F783B26C72F810073869F /* AppleTerminalOutput.mm */,
-				667F783C26C72F810073869F /* AppleTerminalOutput.h */,
+				366F785128663B0800BA33A3 /* HTMLFactory.cpp */,
+				366F785228663B0800BA33A3 /* HTMLFactory.h */,
+				366F785428663B0800BA33A3 /* TerminalFactory.cpp */,
+				366F785328663B0800BA33A3 /* TerminalFactory.h */,
+				366F784C28663ACE00BA33A3 /* AppleTerminalOutput.h */,
+				366F784A28663ACE00BA33A3 /* AppleTerminalOutput.mm */,
+				366F784B28663ACE00BA33A3 /* BaseOutput.h */,
+				366F784428663ACD00BA33A3 /* HTMLFileOutput.cpp */,
+				366F784728663ACE00BA33A3 /* HTMLFileOutput.h */,
+				366F784928663ACE00BA33A3 /* MacOutput.h */,
+				366F784628663ACE00BA33A3 /* MacOutput.mm */,
+				366F784528663ACD00BA33A3 /* TerminalOutput.cpp */,
+				366F784828663ACE00BA33A3 /* TerminalOutput.h */,
+				366F784028663A5200BA33A3 /* log.cpp */,
+				366F783E28663A5200BA33A3 /* log.h */,
+				366F783F28663A5200BA33A3 /* Logger.cpp */,
+				366F784128663A5200BA33A3 /* Logger.h */,
 				667F783326C5CAD40073869F /* stacktrace_linux.cpp */,
 				667F783426C5CAD40073869F /* stacktrace_linux.h */,
 				667F782F26C5CAB00073869F /* StackTraceSingleton.cpp */,
 				667F783026C5CAB00073869F /* StackTraceSingleton.h */,
-				667F782726C5CA830073869F /* HTMLFactory.cpp */,
-				667F782926C5CA830073869F /* HTMLFactory.h */,
-				667F782826C5CA830073869F /* TerminalFactory.cpp */,
-				667F782A26C5CA830073869F /* TerminalFactory.h */,
-				667F781626C5CA6E0073869F /* BaseOutput.h */,
-				667F780E26C5CA6D0073869F /* HTMLFileOutput.cpp */,
-				667F781126C5CA6D0073869F /* HTMLFileOutput.h */,
-				667F781726C5CA6E0073869F /* TerminalOutput.cpp */,
-				667F781326C5CA6D0073869F /* TerminalOutput.h */,
-				667F780B26C5CA5B0073869F /* TypeMessages.h */,
-				667F780126C5CA4A0073869F /* LoggerParams.cpp */,
-				667F780526C5CA4A0073869F /* LoggerParams.h */,
-				667F780226C5CA4A0073869F /* StrConsts.h */,
-				667F780326C5CA4A0073869F /* time_utils.h */,
-				667F780426C5CA4A0073869F /* tuple_utils.h */,
-				667F77F926C5CA240073869F /* log.cpp */,
-				667F77FB26C5CA240073869F /* log.h */,
-				667F77FC26C5CA240073869F /* Logger.cpp */,
-				667F77FA26C5CA240073869F /* Logger.h */,
 				667F77F726C5CA0E0073869F /* ctml.hpp */,
 				667F77F126C5C9FF0073869F /* ConverterStringHelper.cpp */,
 				667F77F026C5C9FF0073869F /* ConverterStringHelper.h */,
@@ -238,34 +213,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366F784E28663ACE00BA33A3 /* TerminalOutput.cpp in Sources */,
 				667F783526C5CAD40073869F /* stacktrace_linux.cpp in Sources */,
 				667F783626C5CAD40073869F /* stacktrace_linux.h in Sources */,
+				366F784328663A5200BA33A3 /* log.cpp in Sources */,
+				366F784F28663ACE00BA33A3 /* MacOutput.mm in Sources */,
+				366F785028663ACE00BA33A3 /* AppleTerminalOutput.mm in Sources */,
 				667F783126C5CAB00073869F /* StackTraceSingleton.cpp in Sources */,
 				667F783226C5CAB00073869F /* StackTraceSingleton.h in Sources */,
-				667F782B26C5CA830073869F /* HTMLFactory.cpp in Sources */,
-				667F784026C733010073869F /* MacOutput.mm in Sources */,
-				667F782C26C5CA830073869F /* TerminalFactory.cpp in Sources */,
-				667F782D26C5CA830073869F /* HTMLFactory.h in Sources */,
-				667F783D26C72F810073869F /* AppleTerminalOutput.mm in Sources */,
-				667F782E26C5CA830073869F /* TerminalFactory.h in Sources */,
-				667F781B26C5CA6E0073869F /* HTMLFileOutput.cpp in Sources */,
-				667F781E26C5CA6E0073869F /* HTMLFileOutput.h in Sources */,
-				667F782026C5CA6E0073869F /* TerminalOutput.h in Sources */,
-				667F782326C5CA6E0073869F /* BaseOutput.h in Sources */,
-				667F782426C5CA6E0073869F /* TerminalOutput.cpp in Sources */,
-				667F780C26C5CA5B0073869F /* TypeMessages.h in Sources */,
-				667F780626C5CA4A0073869F /* LoggerParams.cpp in Sources */,
-				667F780726C5CA4A0073869F /* StrConsts.h in Sources */,
-				667F780826C5CA4A0073869F /* time_utils.h in Sources */,
-				667F780926C5CA4A0073869F /* tuple_utils.h in Sources */,
-				667F780A26C5CA4A0073869F /* LoggerParams.h in Sources */,
-				667F77FD26C5CA240073869F /* log.cpp in Sources */,
-				667F77FE26C5CA240073869F /* Logger.h in Sources */,
-				667F77FF26C5CA240073869F /* log.h in Sources */,
-				667F780026C5CA240073869F /* Logger.cpp in Sources */,
+				366F785528663B0800BA33A3 /* HTMLFactory.cpp in Sources */,
 				667F77F826C5CA0E0073869F /* ctml.hpp in Sources */,
+				366F784D28663ACE00BA33A3 /* HTMLFileOutput.cpp in Sources */,
 				667F77F326C5C9FF0073869F /* StatusFunction.cpp in Sources */,
+				366F785628663B0800BA33A3 /* TerminalFactory.cpp in Sources */,
 				667F77F426C5C9FF0073869F /* ConverterStringHelper.h in Sources */,
+				366F784228663A5200BA33A3 /* Logger.cpp in Sources */,
 				667F77F526C5C9FF0073869F /* ConverterStringHelper.cpp in Sources */,
 				667F77F626C5C9FF0073869F /* StatusFunction.h in Sources */,
 				667F77ED26C5C9EF0073869F /* pch.cpp in Sources */,
