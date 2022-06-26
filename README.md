@@ -14,6 +14,16 @@ Next, call one of four methods, depending on the logging:
 
 And pass any number of arguments to the function. Arguments are separated by whitespace, and for everyone argument operator<< (ostream) must be overloaded for output. Each method returns false if the logger is not initialized, or true if the logger is ready to work. Automatic stack trace output is supported for everyone OS.
 
+Outputs fo OS:
+
+| OS | HTML - file output | Terminal output | Logcat output | macOS alert output | Visual Studio output | WinAPI MsgBox output |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| Windows | OK | OK | NOT | NOT | OK | OK |
+| Linux | OK | OK | NOT | NOT | NOT | NOT |
+| Android | OK | OK | OK | NOT | NOT | NOT |
+| macOS | OK | OK | NOT | OK | NOT | NOT |
+| iOS | OK | OK | NOT | NOT | NOT | NOT |
+
 Using libraries:
 
 | Library | Link |
